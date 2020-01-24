@@ -1,0 +1,67 @@
+html, body{padding:0;margin:0;font-family:sans-serif;}
+html{
+    background-color: #5c5c5c;
+    font-size: 1.25em;
+}
+#center{
+    width:45em;
+    height:28em;
+    margin:calc(50vh - 14em) auto 0;
+    background-color: #2b2b2b;
+}
+#center h1{
+    text-align:center;
+    padding: .75em 0 0 0;
+    margin-bottom:.25em;
+    font-size:4em;
+    color: #cfcfcf;
+}
+#center h2{
+    text-align:center;
+    font-size:2em;
+    color: #919191;
+}
+#center form#join{
+    width:20em;
+    margin:auto;
+    height:4.5em;
+}
+#center input[type=text]{
+    font-family:monospace;
+    width:2.4em;
+    padding: 0 .5em;
+    float:left;
+    font-size:4em;
+    text-transform: uppercase;
+}
+#center input[type=text]:focus{
+    outline:none;
+}
+#center #joinSubmit{
+    width:2.8em;
+    height:1.35em;
+    background-color:#9d2f2d;
+    color: #e2e2e2;
+    border:none;
+    float:right;
+    font-size:3em;
+}
+#center #joinSubmit:hover, #center #joinSubmit:focus {
+    cursor:pointer;
+    background-color: #c55753;
+}
+#createSubmit{
+    clear:both;
+    width:4em;
+    margin:.75em auto 0;
+    display:block;
+    height:1.35em;
+    background-color:#9d2f2d;
+    color: #e2e2e2;
+    border:none;
+    font-size:3em;
+}
+#createSubmit:hover, #createSubmit:focus{
+    cursor:pointer;
+    background-color: #c55753;
+}

@@ -5,14 +5,107 @@
     <title>RPG Chat</title>
     <link rel="stylesheet" href="main.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
-    <ul id="messages"></ul>
-    <form action="">
-        <input id="messageIn" autocomplete="off">
-        <input type="submit" value="Send">
-    </form>
+<div class="container">
+<header>
+    <p>Options</p>
+    <h1>Ink Inc.</h1>
+</header>
+<aside>
+    <div id="user">
+        <img src="profile.png">
+        <h2>E'lon Msuukh</h2>
+        <p>Frank Lastname</p>
+    </div>
+    <ul id="tabs">
+        <li class="tab" id="selectedTab"><p>People</p></li>
+        <li class="tab"><p>Groups</p></li>
+    </ul>
+    <ul id="userList">
+        <li>
+            <img src="profile.png">
+            <h3>Dungeon Master</h3>
+            <p>Steve Joeson</p>
+        </li>
+        <li class="selectedUser">
+            <img src="profile.png">
+            <h3>Mr. Fantastic</h3>
+            <p>Reed Richards</p>
+        </li>
+        <li>
+            <img src="profile.png">
+            <h3>Orange</h3>
+            <p>Frank Loonar</p>
+        </li>
+        <li>
+            <img src="profile.png">
+            <h3>Taako</h3>
+            <p>Justin McElroy</p>
+        </li>
+    </ul>
+</aside>
+<main>
+    <h2>Reed Richards<span>Mr. Fantastic</span></h2>
+    <ul id="messageList">
+        <li>
+            <img src="profile.png" class="profilePic">
+            <h3>Mr. Fantastic<span>Reed Richards</span></h3>
+            <p>This is a test message.</p>
+            <p>This is a test message.</p>
+            <p>This is a test message.</p>
+            <p>This is a test message.</p>
+        </li>
+        <li class="selfMessage">
+            <img src="profile.png" class="profilePic">
+            <h3>E'lon Msuukh<span>Frank Lastname</span></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur <span class="exposition">adipisicing elit. Architecto earum eos eveniet ex exercitationem minus natus nulla quasi unde voluptates! Aperiam corporis cumque debitis dignissimos dolores esse, est fugit ipsam</span> iste mollitia quasi repudiandae sed ullam! Aliquid ducimus esse nisi. A aspernatur autem dolor et fuga fugiat iste, magnam molestias numquam similique sunt voluptatem! Architecto cumque dolor tempore vitae. Accusamus alias aperiam asperiores, aut distinctio earum hic impedit inventore iure, laboriosam laborum molestias nam neque odio odit optio perferendis porro quia quod reprehenderit repudiandae rerum sequi soluta suscipit tenetur velit voluptas voluptates. Accusamus cupiditate, debitis distinctio dolorem eligendi et ex expedita id impedit incidunt ipsam iste iure, laboriosam magnam magni nemo odio provident quia quibusdam quos ratione rem tempora tempore totam veritatis vero voluptas! Animi blanditiis cumque debitis deserunt dicta dignissimos dolore dolores facilis minima, nam nostrum quae quia, quo ratione saepe similique, sunt! Alias aliquam, aperiam autem deleniti ducimus eum fugiat id ipsa maiores minima nam repellendus tempora, tenetur. Aliquid amet aspernatur consequatur cum dolorem enim est ex facilis ipsum, perferendis possimus praesentium quae quam saepe soluta totam veniam? A asperiores distinctio dolore doloremque enim error inventore nam non ullam vero. Ipsam minima nostrum quisquam, rerum sed sit tenetur!</p>
+        </li>
+        <li>
+            <img src="profile.png" class="profilePic">
+            <h3>Mr. Fantastic<span>Reed Richards</span></h3>
+            <p>This is a test message.</p>
+        </li>
+        <li class="selfMessage">
+            <img src="profile.png" class="profilePic">
+            <h3>E'lon Msuukh<span>Frank Lastname</span></h3>
+            <p>This is a test message.</p>
+            <img class="messageImg" src="test.png">
+        </li>
+        <li>
+            <img src="profile.png" class="profilePic">
+            <h3>Mr. Fantastic<span>Reed Richards</span></h3>
+            <p>This is a test message.</p>
+        </li>
+    </ul>
+</main>
+<div id="messageBar">
+    <h2>Speaking as</h2>
+    <div id="charChooser">
+        <div>
+            <img src="profile.png">
+            <p>E'lon Msuukh</p>
+            <img src="arrow.png" id="chooseButton">
+        </div>
+        <!--
+        When multiple:
+            #charChooser{
+                height:calc(2.5em*count);
+                bottom:calc(2.5em*count-1);
+            }
+            #charChooser div{
+                height:calc(100%/count);
+            }
+            #charChooser img#chooseButton{
+                transform:rotate(180deg);
+            }
+        -->
+    </div>
+    <img src="imagebutton" id="imageButton">
+    <input type="text" placeholder="Type your message here" autocomplete="off">
+    <button>Send</button>
+</div>
+</div>
 </body>
 </html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Setup User</title>
+    <link rel="stylesheet" href="userSetup.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="userSetup.js"></script>
+</head>
+<body>
+    <div id="imageUI">
+        <h2>Choose Your Character Icon</h2>
+        <img id="exampleImage" src="profilePics/01.jpg">
+        <div id="imageOptions">
+            <img src="profilePics/01.jpg">
+            <img src="profilePics/02.jpg">
+            <img src="profilePics/03.jpg">
+            <img src="profilePics/04.jpg">
+            <img src="profilePics/05.jpg">
+            <img src="profilePics/06.jpg">
+            <img src="profilePics/07.jpg">
+            <input id="newImg" type="file" accept="image/*">
+            <label for="newImg">+</label>
+        </div>
+        <button id="confirmImage">Confirm</button>
+    </div>
+    <div id="center">
+        <form id="userForm" action="/chat" method="post" onsubmit="">
+            <div id="groupNameBox">
+                <label for="groupName">Group Name</label><br>
+                <input type="text" id="groupName" name="groupName" maxlength="20" autocomplete="off" spellcheck="false" required>
+            </div>
+            <div id="playerNameBox">
+                <label for="playerName">Player Name</label><br>
+                <input type="text" id="playerName" name="playerName" maxlength="50" autocomplete="off" spellcheck="false" required>
+            </div>
+            <h1>Character</h1>
+            <div id="charBox">
+                <div>
+                    <img src="imgChooser.png">
+                    <input type="file" class="charImage" name="charImage" tabindex="-1" required>
+                    <input type="hidden" name="charImageID" value='01'>
+                    <input type="text" id="charName" name="charName" maxlength="50" autocomplete="off" spellcheck="false" required>
+                </div>
+            </div>
+            <h1>Aliases<span>(optional)</span></h1>
+            <div id="aliases">
+                <div class="alias" id="newAlias">
+                    <img id="newAliasImg" src="plus.png">
+                    <h2>New Alias</h2>
+                </div>
+                <input type="hidden" value="0" name="aliasCount" id="aliasCount">
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

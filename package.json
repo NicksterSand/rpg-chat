@@ -1,5 +1,5 @@
 {
-  "name": "RPG Group Chat",
+  "name": "rpg-group-chat",
   "description": "A chat app for tabletop RPG's.",
   "dependencies": {
     "express": "^4.17.1",

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join RPG Chat</title>
+    <link rel="stylesheet" href="join.css">
+    <script src="join.js"></script>
+</head>
+<body>
+    <div id="center">
+        <h1>RPG Chat</h1>
+        <h2>Join an existing room or create a new one.</h2>
+        <form id="join" action="/" method="post" onsubmit="setCookies(document.getElementById('code').value.toUpperCase())">
+            <input type="text" placeholder="CODE" id="code" name="code" minlength="4" maxlength="4" autocomplete="off" spellcheck="false" required>
+            <input type="hidden" name="create" value="false">
+            <input id="joinSubmit" type="submit" value="Join">
+        </form>
+        <form id="create" action="/" method="post" onsubmit="setCookies('CREATE');">
+            <input type="hidden" name="code" value="">
+            <input type="hidden" name="create" value="true">
+            <input id=createSubmit type="submit" value="Create">
+        </form>
+    </div>
+</body>
+</html>
